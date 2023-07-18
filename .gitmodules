@@ -1,0 +1,3 @@
+[submodule "gensync-core"]
+	path = gensync-core
+	url = https://github.com/nislab/gensync-core.git
