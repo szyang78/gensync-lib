@@ -1,16 +1,11 @@
-# macports_GenSync
+# GenSync-macports
 
-macports_GenSync provides a [library](https://github.com/nislab/gensync/tree/vanilla) for synchronizing data _efficiently_ across different machines on MACOS.  The library
+GenSync-macports is the extended version for MACOS. It provides a [library](https://github.com/nislab/gensync/tree/vanilla) for synchronizing data _efficiently_ across different machines on MACOS.  The library
 includes implmenetations of several state-of-the-art protocols that optimize different metrics, including:
 * ___Communication___ - total number of bytes transmitted
 * ___Rounds___ - the amount of back-and-forth needed to compelte synchronization
 * ___Computation___ - computing resources required
 * ___Memory___ - amount of physical memory needed
-
-Extensions of this work can be found at the [GenSync project](https://github.com/nislab/gensync) at [Boston University NISLAB](http://nislab.bu.edu), including:
-* Benchmarking and testing infrastructure
-* Logging capabilities
-* Debugging and development options
 
 The current version is 2.0.4
 
@@ -396,8 +391,8 @@ Elements of the GenSync project code have been worked on, at various points, by:
     * [cmake](https://cmake.org) - For building
 * _Source-based Compilation:_
 ```
-$ git clone --recurse-submodules git@github.com:nislab/gensync.git
-$ cd gensync
+$ git clone --recurse-submodules git@github.com:nislab/gensync-macports.git
+$ cd gensync-macports
 $ cmake -B build
 $ cmake --build build
 ```
