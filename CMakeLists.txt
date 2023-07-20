@@ -123,9 +123,9 @@ set(HEADERS
 include_directories(gensync-core/include)
 
 # Users may need to update these paths
-include_directories(/opt/local/include)
-link_directories(/opt/local/lib)
-link_directories(/opt/local/lib64)
+include_directories(${includedir}/include)
+link_directories(${includedir}/lib)
+link_directories(${includedir}/lib64)
 
 include_directories(${CMAKE_INSTALL_INCLUDEDIR})
 link_directories(${CMAKE_INSTALL_LIBDIR})
