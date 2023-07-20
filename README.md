@@ -1,6 +1,6 @@
 # GenSync-macports
 
-GenSync-macports is the extended version for MACOS. It provides a [library](https://github.com/nislab/gensync/tree/vanilla) for synchronizing data _efficiently_ across different machines on MACOS.  The library
+GenSync-macports is the extended version for MACOS. It provides a library for synchronizing data _efficiently_ across different machines on MACOS.  The library
 includes implmenetations of several state-of-the-art protocols that optimize different metrics, including:
 * ___Communication___ - total number of bytes transmitted
 * ___Rounds___ - the amount of back-and-forth needed to compelte synchronization
