@@ -9,7 +9,7 @@ PortGroup               legacysupport 1.1
 # strndup
 legacysupport.newest_darwin_requires_legacy 10
 
-github.setup            nislab gensync 1.0.2.1 v
+github.setup            nislab gensync 1.1.0 v
 revision                0
 
 categories              net devel
@@ -28,8 +28,6 @@ post-fetch {
 }
 
 depends_lib             port:ntl
-
-cmake.out_of_source     yes
 
 post-destroot {
     system "mkdir ${destroot}${prefix}/share/doc/${name}"
