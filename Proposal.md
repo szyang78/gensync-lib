@@ -1,10 +1,11 @@
 #### Description
 **gensync: update to version 2.0.4**
-* update to version 2.0.4
-* setup environment variable
-* add portgroup to fit into older version Macos
-* deleted redundant line (cmake.out_of_source   yes)
+* updated code to version 2.0.4
+* updated to compile from any macports directory, addressing [2](https://github.com/nislab/gensync/issues/2)
+* add legacy portgroup setting, as per [2](https://github.com/nislab/gensync/issues/2)
+* deleted redundant line (cmake.out_of_source   yes), as per [2](https://github.com/nislab/gensync/issues/2)
 
+Closes: [2](https://github.com/nislab/gensync/issues/2)
 <!-- Note: it is best to make pull requests from a branch rather than from master -->
 
 ###### Type(s)
@@ -18,8 +19,10 @@
 <!-- Triple-click and copy the next line and paste it into your shell. It will copy your OS and Xcode version to the clipboard. Paste it here replacing this section.
 sh -c 'echo "macOS $(sw_vers -productVersion) $(sw_vers -buildVersion) $(uname -m)"; xcode=$(xcodebuild -version 2>/dev/null); if [ $? == 0 ]; then echo "$(echo "$xcode" | awk '\''NR==1{x=$0}END{print x" "$NF}'\'')"; else echo "Command Line Tools $(pkgutil --pkg-info=com.apple.pkg.CLTools_Executables | awk '\''/version:/ {print $2}'\'')"; fi' | tee /dev/tty | pbcopy
 -->
-macOS 13.0.1 22A400 arm64
-Xcode 14.3.1 14E300c
+* macOS 13.0.1 22A400 arm64
+* Xcode 14.3.1 14E300c
+* Apple clang 14.0.3
+* NTL 11.5.1_0
 
 ###### Verification <!-- (delete not applicable items) -->
 Have you
