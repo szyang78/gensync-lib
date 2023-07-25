@@ -3,6 +3,7 @@
 * update to version 2.0.4
 * setup environment variable
 * add portgroup to fit into older version Macos
+* deleted redundant line (cmake.out_of_source   yes)
 
 <!-- Note: it is best to make pull requests from a branch rather than from master -->
 
