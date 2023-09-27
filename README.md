@@ -1,6 +1,6 @@
-# GenSync-macports
+# GenSync-lib
 
-GenSync-macports is the extended version for MACOS. It provides a library for synchronizing data _efficiently_ across different machines on MACOS.  The library
+GenSync-lib is the version for packagin. It provides a library for synchronizing data _efficiently_ across different machines on MACOS and Linux.  The library
 includes implmenetations of several state-of-the-art protocols that optimize different metrics, including:
 * ___Communication___ - total number of bytes transmitted
 * ___Rounds___ - the amount of back-and-forth needed to compelte synchronization
@@ -24,7 +24,7 @@ The current version is 2.0.4
 <a name="Examples"></a>
 ## Examples
 
-Here is a simple example of GenSync in action.  It can be compiled as follows, with `/opt/local` replaced by your MacPorts directory:
+Here is a simple example of GenSync in action.  It can be compiled as follows, with `/opt/local` replaced by your MacPorts directory, or if on Linux replaced by your libraries directory:
 
 ### TryMe.cpp
 This program launches two processes, connected by a network socket:
@@ -32,12 +32,16 @@ This program launches two processes, connected by a network socket:
 * The second process (host 2) contains a set of elements 'b' and 'd'.
 
 #### Compilation
-The program can be compiled with
+On MACOS, the program can be compiled with
 ```shell
 $ g++ -I/opt/local/include -L/opt/local/lib -std=c++11 TryMe.cpp -lgensync -lntl -o tryme
 $ ./tryme
 ```
-
+On Linux, the program can be compiled with
+```shell
+$ g++ -I/usr/local/include -L/usr/local/lib -std=c++11 TryMe.cpp -lgensync -lntl -o tryme
+$ ./tryme
+```
 #### Output
 The output from the program shows both hosts with the same sets (note that the order of elements within a set does not matter):
 ```
@@ -174,11 +178,14 @@ int main(int argc, char *argv[]) {
     }
 }
 ```
-To compile use:
+On MACOS, to compile use:
 ```shell
 $ g++ -I/opt/local/include -L/opt/local/lib -std=c++11 tryme2.cpp -lgensync -lntl -o tryme2
 ```
-
+On Linux, to compile use:
+```shell
+$ g++ -I/usr/local/include -L/usr/local/lib -std=c++11 tryme2.cpp -lgensync -lntl -o tryme2
+```
 To run, open two terminals.  In one issue the command:
 ```
 $ ./tryme2 server CPISync
@@ -391,8 +398,8 @@ Elements of the GenSync project code have been worked on, at various points, by:
     * [cmake](https://cmake.org) - For building
 * _Source-based Compilation:_
 ```
-$ git clone --recurse-submodules git@github.com:nislab/gensync-macports.git
-$ cd gensync-macports
+$ git clone --recurse-submodules git@github.com:nislab/gensync-lib.git
+$ cd gensync-lib
 $ cmake -B build
 $ cmake --build build
 ```
