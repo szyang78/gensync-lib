@@ -1,6 +1,6 @@
 # GenSync-lib
 
-GenSync-lib is the version for packaging. It provides a library for synchronizing data _efficiently_ across different machines on MACOS and Linux.  The library
+GenSync-lib is the version for packaging. It provides a library for synchronizing data _efficiently_ across different machines on MacOS and Linux.  The library
 includes implmenetations of several state-of-the-art protocols that optimize different metrics, including:
 * ___Communication___ - total number of bytes transmitted
 * ___Rounds___ - the amount of back-and-forth needed to compelte synchronization
@@ -32,7 +32,7 @@ This program launches two processes, connected by a network socket:
 * The second process (host 2) contains a set of elements 'b' and 'd'.
 
 #### Compilation
-On MACOS, the program can be compiled with
+On MacOS, the program can be compiled with
 ```shell
 $ g++ -I/opt/local/include -L/opt/local/lib -std=c++11 TryMe.cpp -lgensync -lntl -o tryme
 $ ./tryme
@@ -178,7 +178,7 @@ int main(int argc, char *argv[]) {
     }
 }
 ```
-On MACOS, to compile use:
+On MacOS, to compile use:
 ```shell
 $ g++ -I/opt/local/include -L/opt/local/lib -std=c++11 tryme2.cpp -lgensync -lntl -o tryme2
 ```
