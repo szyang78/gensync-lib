@@ -122,8 +122,14 @@ set(HEADERS
 
 include_directories(gensync-core/include)
 # Check if the "includedir" variable is already set
-if(NOT DEFINED includedir)
-    set(includedir "/opt/local" CACHE PATH "Path to the include directory")
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+        if(NOT DEFINED includedir)
+                set(includedir "/usr/local")
+        endif()
+elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
+        if(NOT DEFINED includedir)
+                set(includedir "/opt/local")
+        endif()
 endif()
 
 # Users may need to update these paths
