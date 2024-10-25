@@ -9,6 +9,8 @@ includes implmenetations of several state-of-the-art protocols that optimize dif
 
 The current version is 2.0.4
 
+For examples,please refer to Readme in gensync_core.
+
 ------------------------------
 
 ## Table Of Contents
